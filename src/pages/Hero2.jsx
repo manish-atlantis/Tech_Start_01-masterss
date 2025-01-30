@@ -44,7 +44,7 @@ const Hero2 = () => {
           transition={{ delay: 1, duration: 1 }}
         >
           <img
-            src="../../public/images/logo.png"
+            src="/images/logo.png"
             alt="Web Atlantis Logo"
             className="w-64 sm:w-80 mx-auto"
           />
