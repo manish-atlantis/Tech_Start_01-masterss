@@ -29,7 +29,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center py-8">
+    <div className="min-h-screen bg-white flex items-center justify-center py-8 id="contact">
       <div className="w-full max-w-screen-xl grid grid-cols-1 md:grid-cols-2 gap-8">
         
         {/* Left Section: Contact Details */}
