@@ -25,7 +25,7 @@ const ClientLogos = () => {
         <div className="flex flex-wrap justify-center gap-12">
           <div className="single-client text-center">
             <img
-              src="../../public/images/elastologo.jpeg"
+              src="/images/elastologo.jpeg"
               alt="Elastomech Logo"
               className="max-w-[150px] h-auto mx-auto"
             />
