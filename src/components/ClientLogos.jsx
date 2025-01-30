@@ -32,14 +32,14 @@ const ClientLogos = () => {
           </div>
           <div className="single-client text-center">
             <img
-              src="../../public/images/adrenixlogo.png"
+              src="/images/adrenixlogo.png"
               alt="Adrenix Logo"
               className="max-w-[150px] h-auto mx-auto"
             />
           </div>
           <div className="single-client text-center">
             <img
-              src="../../public/images/healthbridgelogo.png"
+              src="/images/healthbridgelogo.png"
               alt="Health Bridge International Logo"
               className="max-w-[150px] h-auto mx-auto"
             />
