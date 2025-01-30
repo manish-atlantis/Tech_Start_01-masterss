@@ -1,6 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
 export default function Hero() {
   return (
     <div className="relative h-screen bg-black overflow-hidden flex items-center justify-center ">
@@ -95,12 +102,13 @@ export default function Hero() {
           Your Partner in Digital Transformation. Uniting Trust, Technology, and
           Excellence.
         </motion.p>
-        <motion.button
-          className="mt-10 px-10 py-4 text-lg font-bold uppercase tracking-wider text-black bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg shadow-xl hover:scale-105 transition-transform"
-          whileHover={{ scale: 1.1 }}
-        >
-          Get Started
-        </motion.button>
+      <motion.button
+      className="mt-10 px-10 py-4 text-lg font-bold uppercase tracking-wider text-black bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg shadow-xl hover:scale-105 transition-transform"
+      whileHover={{ scale: 1.1 }}
+      onClick={scrollToContact} // Handle the scroll action on click
+    >
+      Get Started
+    </motion.button>
       </div>
 
       {/* Scroll Indicator */}
