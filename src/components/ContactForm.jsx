@@ -92,60 +92,77 @@ const ContactUs = () => {
         <div className="bg-white p-8 border border-gray-300 rounded-lg shadow-lg">
           <h2 className="text-3xl font-bold text-center text-black mb-6">Get in Touch</h2>
           
-          <form ref={form} onSubmit={sendEmail} className="space-y-6">
-            {/* Name Input */}
-            <div>
-              <label htmlFor="user_name" className="block text-lg font-medium text-black mb-2">
-                Name
-              </label>
-              <input
-                type="text"
-                name="user_name"  // Matches the template placeholder
-                id="user_name"
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
-              />
-            </div>
+         <form ref={form} onSubmit={sendEmail} className="space-y-6">
+  {/* Name Input */}
+  <div>
+    <label htmlFor="user_name" className="block text-lg font-medium text-black mb-2">
+      Name
+    </label>
+    <input
+      type="text"
+      name="user_name"  
+      id="user_name"
+      required
+      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+    />
+  </div>
 
-            {/* Email Input */}
-            <div>
-              <label htmlFor="user_email" className="block text-lg font-medium text-black mb-2">
-                Email
-              </label>
-              <input
-                type="email"
-                name="user_email"  // Matches the template placeholder
-                id="user_email"
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
-              />
-            </div>
+  {/* Email Input */}
+  <div>
+    <label htmlFor="user_email" className="block text-lg font-medium text-black mb-2">
+      Email
+    </label>
+    <input
+      type="email"
+      name="user_email"
+      id="user_email"
+      required
+      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+    />
+  </div>
 
-            {/* Message Textarea */}
-            <div>
-              <label htmlFor="message" className="block text-lg font-medium text-black mb-2">
-                Message
-              </label>
-              <textarea
-                name="message"  // Matches the template placeholder
-                id="message"
-                required
-                rows="4"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
-              ></textarea>
-            </div>
+  {/* Phone Number Input */}
+  <div>
+    <label htmlFor="user_phone" className="block text-lg font-medium text-black mb-2">
+      Phone Number
+    </label>
+    <input
+      type="tel"
+      name="user_phone"
+      id="user_phone"
+      required
+      pattern="[0-9]{10}"  // Ensures a 10-digit phone number
+      placeholder="Enter 10-digit phone number"
+      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+    />
+  </div>
 
-            {/* Submit Button */}
-            <div>
-              <button
-                type="submit"
-                className="w-full py-3 px-4 bg-blue-600 text-white text-lg font-semibold rounded-lg hover:bg-blue-700 transition"
-                disabled={isLoading}
-              >
-                {isLoading ? 'Sending...' : 'Send Message'}
-              </button>
-            </div>
-          </form>
+  {/* Message Textarea */}
+  <div>
+    <label htmlFor="message" className="block text-lg font-medium text-black mb-2">
+      Message
+    </label>
+    <textarea
+      name="message"
+      id="message"
+      required
+      rows="4"
+      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+    ></textarea>
+  </div>
+
+  {/* Submit Button */}
+  <div>
+    <button
+      type="submit"
+      className="w-full py-3 px-4 bg-blue-600 text-white text-lg font-semibold rounded-lg hover:bg-blue-700 transition"
+      disabled={isLoading}
+    >
+      {isLoading ? 'Sending...' : 'Send Message'}
+    </button>
+  </div>
+</form>
+
 
           {/* Message Status */}
           {messageStatus && (
