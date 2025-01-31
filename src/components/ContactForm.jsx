@@ -23,7 +23,7 @@ const ContactUs = () => {
       .then(
         () => {
           setIsLoading(false);
-          setMessageStatus('Message sent successfully!');
+          setMessageStatus('Ww will get back to you shortly!');
           form.current.reset();  // Reset the form after sending
         },
         (error) => {
